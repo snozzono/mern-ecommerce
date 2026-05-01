@@ -16,8 +16,6 @@ services:
       - CLIENT_URL=http://localhost:8082
       - JWT_SECRET=update_your_JWT_secret
       - MONGO_URI=mongodb://mongo:27017/mern_ecommerce
-    ports:
-      - '3001:3000'
     command: ['sh', '-c', 'npm run seed:db admin@example.com admin123 && npm start']
     depends_on:
       - mongo
